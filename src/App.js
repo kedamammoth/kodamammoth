@@ -14,6 +14,7 @@ import original from "react95/dist/themes/original";
 /* Original Windows95 font (optional) */
 import ms_sans_serif from "react95/dist/fonts/ms_sans_serif.woff2";
 import ms_sans_serif_bold from "react95/dist/fonts/ms_sans_serif_bold.woff2";
+import marumonica from "./font/x12y16pxmarumonica.ttf";
 
 const GlobalStyles = createGlobalStyle`
   ${styleReset}
@@ -29,8 +30,15 @@ const GlobalStyles = createGlobalStyle`
     font-weight: bold;
     font-style: normal
   }
+  @font-face {
+    font-family: 'marumonica';
+    src: url('${marumonica}') format('truetype');
+    font-weight: bold;
+    font-style: normal
+  }
   body, input, select, textarea {
     font-family: 'ms_sans_serif';
+    /* font-family: 'marumonica'; */
   }
   body {
     background-color: rgb(85, 170, 170);
