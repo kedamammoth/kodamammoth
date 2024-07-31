@@ -10,6 +10,7 @@ import {
   Window,
   WindowHeader,
   WindowContent,
+  ScrollView,
 } from 'react95';
 import logoIMG from 'react95/dist/images/logo.png';
 import iconIMG from '../img/icon.png';
@@ -99,6 +100,7 @@ function Top() {
               </Button>
             </WindowHeader>
             <WindowContent style={{ fontSize: '13px', fontWeight: 'bold' }}>
+            <ScrollView style={{height: '360px' }}>
               Kodama Sakura ｜ 児玉 さくら
               <br />
               <br />
@@ -114,6 +116,7 @@ function Top() {
               このサイトは、React95を使ってみたくてお試しサイトですが、いつか「児玉さくら伝記サイト」を作りたいです🚀🚀🚀
               <br />
               <br />
+              </ScrollView>
             </WindowContent>
           </Window>
         </Draggable>
@@ -159,8 +162,8 @@ const WindowStyles = createGlobalStyle`
     }
   }
   .window {
-    width: min(440px, 100%);
-    height: 400px;
+    width: min(500px, 100%);
+    height: 440px;
   }
   .window.-profile {
     position: absolute;
