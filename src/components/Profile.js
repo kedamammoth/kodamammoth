@@ -65,7 +65,8 @@ function Top() {
             </MenuList>
           )}
         </div>
-        <div
+        <a
+          href="/"
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -73,7 +74,7 @@ function Top() {
           }}>
           <Avatar size={50} src={iconIMG} />
           <div>kedamammoth</div>
-        </div>
+        </a>
       </Toolbar>
     </AppBar>
   );
