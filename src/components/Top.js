@@ -113,7 +113,6 @@ function Top() {
                   </span>
                   Profile
                 </MenuListItem>
-                <Separator />
                 <MenuListItem as="a" href="/gallery/">
                   <span role="img" aria-label="🚀">
                     🚀

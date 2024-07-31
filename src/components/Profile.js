@@ -1,67 +1,79 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
+  Avatar,
   AppBar,
   Button,
   MenuList,
   MenuListItem,
   Separator,
-  TextInput,
   Toolbar,
-} from "react95";
-import logoIMG from "react95/dist/images/logo.png";
+} from 'react95';
+import logoIMG from 'react95/dist/images/logo.png';
+import iconIMG from '../img/icon.png';
 
 function Top() {
   const [open, setOpen] = useState(false);
 
   return (
     <AppBar>
-      <Toolbar style={{ justifyContent: "space-between" }}>
-        <div style={{ position: "relative", display: "inline-block" }}>
+      <Toolbar style={{ justifyContent: 'space-between' }}>
+        <div style={{ position: 'relative', display: 'inline-block' }}>
           <Button
             onClick={() => setOpen(!open)}
             active={open}
-            style={{ fontWeight: "bold" }}
-          >
+            style={{ fontWeight: 'bold' }}>
             <img
               src={logoIMG}
               alt="react95 logo"
-              style={{ height: "20px", marginRight: 4 }}
+              style={{ height: '20px', marginRight: 4 }}
             />
             Start
           </Button>
           {open && (
             <MenuList
               style={{
-                position: "absolute",
-                left: "0",
-                top: "100%",
+                position: 'absolute',
+                left: '0',
+                top: '100%',
               }}
-              onClick={() => setOpen(false)}
-            >
-              <MenuListItem>
-                <span role="img" aria-label="👨‍💻">
-                  👨‍💻
+              onClick={() => setOpen(false)}>
+              <MenuListItem as="a" href="/profile/" disabled>
+                <span
+                  role="img"
+                  aria-label="👩‍💻"
+                  style={{
+                    display: 'inline-block',
+                    marginRight: '10px',
+                  }}>
+                  👩‍💻
                 </span>
                 Profile
               </MenuListItem>
-              <MenuListItem>
-                <span role="img" aria-label="📁">
-                  📁
+              <MenuListItem as="a" href="/gallery/">
+                <span role="img" aria-label="🚀">
+                  🚀
                 </span>
-                My account
+                Gallery
               </MenuListItem>
               <Separator />
-              <MenuListItem disabled>
+              <MenuListItem as="a" href="/">
                 <span role="img" aria-label="🔙">
                   🔙
                 </span>
-                Logout
+                Top
               </MenuListItem>
             </MenuList>
           )}
         </div>
-
-        <TextInput placeholder="Search..." width={150} />
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '10px',
+          }}>
+          <Avatar size={50} src={iconIMG} />
+          <div>kedamammoth</div>
+        </div>
       </Toolbar>
     </AppBar>
   );
