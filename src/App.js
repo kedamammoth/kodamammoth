@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import "./service/firebase";
-import Top from './components/Top';
-import Profile from './components/Profile';
-import Gallery from './components/Gallery';
+import Top from './pages/Top';
+import Profile from './pages/Profile';
+import Gallery from './pages/Gallery';
 
 import React from 'react';
 import { styleReset, Toolbar } from 'react95';
