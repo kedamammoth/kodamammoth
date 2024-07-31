@@ -5,7 +5,7 @@ import Profile from './pages/Profile';
 import Gallery from './pages/Gallery';
 
 import React from 'react';
-import { styleReset, Toolbar } from 'react95';
+import { styleReset } from 'react95';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 /* Pick a theme of your choice */
