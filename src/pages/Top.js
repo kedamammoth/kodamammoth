@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Draggable from 'react-draggable';
 import {
   AppBar,
   Button,
@@ -7,10 +6,6 @@ import {
   MenuListItem,
   Toolbar,
   Avatar,
-  Window,
-  WindowHeader,
-  WindowContent,
-  Frame,
   Monitor,
 } from 'react95';
 import logoIMG from 'react95/dist/images/logo.png';
