@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import confetti from 'canvas-confetti';
 import {
   AppBar,
   Button,
@@ -6,7 +7,7 @@ import {
   MenuListItem,
   Toolbar,
   Avatar,
-  Monitor,
+  Hourglass,
 } from 'react95';
 import logoIMG from 'react95/dist/images/logo.png';
 import iconIMG from '../img/icon.png';
@@ -66,6 +67,43 @@ const WindowStyles = createGlobalStyle`
 
 function Top() {
   const [open, setOpen] = useState(false);
+  const fireConfetti = () => {
+    const count = 200;
+    const defaults = {
+      origin: { y: 0.7 },
+    };
+
+    function fire(particleRatio, opts) {
+      confetti({
+        ...defaults,
+        ...opts,
+        particleCount: Math.floor(count * particleRatio),
+      });
+    }
+
+    fire(0.25, {
+      spread: 26,
+      startVelocity: 55,
+    });
+    fire(0.2, {
+      spread: 60,
+    });
+    fire(0.35, {
+      spread: 100,
+      decay: 0.91,
+      scalar: 0.8,
+    });
+    fire(0.1, {
+      spread: 120,
+      startVelocity: 25,
+      decay: 0.92,
+      scalar: 1.2,
+    });
+    fire(0.1, {
+      spread: 120,
+      startVelocity: 45,
+    });
+  };
 
   return (
     <div
@@ -129,7 +167,23 @@ function Top() {
           </a>
         </Toolbar>
       </AppBar>
-      <Monitor />
+      <div
+        style={{
+          height: '100%',
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+        <Button
+          onClick={fireConfetti}
+          style={{ fontSize: '24px', fontWeight: 'bold' }}
+          size="lg"
+          primary>
+          Thank you for finding me!!
+        </Button>
+      </div>
+      <Hourglass size={32} style={{ margin: 20 }} />
     </div>
   );
 }
