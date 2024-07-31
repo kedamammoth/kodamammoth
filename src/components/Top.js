@@ -101,7 +101,7 @@ function Top() {
                   top: '100%',
                 }}
                 onClick={() => setOpen(false)}>
-                <MenuListItem>
+                <MenuListItem as="a" href="/profile/">
                   <span
                     role="img"
                     aria-label="👩‍💻"
@@ -114,7 +114,7 @@ function Top() {
                   Profile
                 </MenuListItem>
                 <Separator />
-                <MenuListItem>
+                <MenuListItem as="a" href="/gallery/">
                   <span role="img" aria-label="🚀">
                     🚀
                   </span>
