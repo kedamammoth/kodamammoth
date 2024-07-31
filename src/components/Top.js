@@ -1,5 +1,5 @@
-import { useState } from "react";
-import Draggable from "react-draggable";
+import { useState } from 'react';
+import Draggable from 'react-draggable';
 import {
   AppBar,
   Button,
@@ -12,10 +12,10 @@ import {
   WindowHeader,
   WindowContent,
   Frame,
-} from "react95";
-import logoIMG from "react95/dist/images/logo.png";
-import iconIMG from "../img/icon.png";
-import { createGlobalStyle } from "styled-components";
+} from 'react95';
+import logoIMG from 'react95/dist/images/logo.png';
+import iconIMG from '../img/icon.png';
+import { createGlobalStyle } from 'styled-components';
 
 const WindowStyles = createGlobalStyle`
   .window-title {
@@ -75,47 +75,43 @@ function Top() {
   return (
     <div
       style={{
-        height: "calc(100vh - 62px)",
-        margin: "62px 0 0",
-      }}
-    >
+        height: 'calc(100vh - 62px)',
+        margin: '62px 0 0',
+      }}>
       <WindowStyles />
       <AppBar style={{ zIndex: 1 }}>
-        <Toolbar style={{ justifyContent: "space-between" }}>
-          <div style={{ position: "relative", display: "inline-block" }}>
+        <Toolbar style={{ justifyContent: 'space-between' }}>
+          <div style={{ position: 'relative', display: 'inline-block' }}>
             <Button
               onClick={() => setOpen(!open)}
               active={open}
-              style={{ fontWeight: "bold" }}
-            >
+              style={{ fontWeight: 'bold' }}>
               <img
                 src={logoIMG}
                 alt="react95 logo"
-                style={{ height: "20px", marginRight: 4 }}
+                style={{ height: '20px', marginRight: 4 }}
               />
               Start
             </Button>
             {open && (
               <MenuList
                 style={{
-                  position: "absolute",
-                  left: "0",
-                  top: "100%",
+                  position: 'absolute',
+                  left: '0',
+                  top: '100%',
                 }}
-                onClick={() => setOpen(false)}
-              >
+                onClick={() => setOpen(false)}>
                 <MenuListItem>
                   <span
                     role="img"
                     aria-label="👩‍💻"
                     style={{
-                      display: "inline-block",
-                      marginRight: "10px",
-                    }}
-                  >
+                      display: 'inline-block',
+                      marginRight: '10px',
+                    }}>
                     👩‍💻
                   </span>
-                  Resume
+                  Profile
                 </MenuListItem>
                 <Separator />
                 <MenuListItem>
@@ -129,11 +125,10 @@ function Top() {
           </div>
           <div
             style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "10px",
-            }}
-          >
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
+            }}>
             <Avatar size={50} src={iconIMG} />
             <div>kedamammoth</div>
           </div>
