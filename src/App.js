@@ -1,20 +1,21 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import "./service/firebase";
-import Top from "./components/Top";
-import Profile from "./components/Profile";
-import Gallery from "./components/Gallery";
+import Top from './components/Top';
+import Profile from './components/Profile';
+import Gallery from './components/Gallery';
 
-import React from "react";
-import { styleReset } from "react95";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
+import React from 'react';
+import { styleReset, Toolbar } from 'react95';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 /* Pick a theme of your choice */
-import original from "react95/dist/themes/original";
+import original from 'react95/dist/themes/original';
 
 /* Original Windows95 font (optional) */
-import ms_sans_serif from "react95/dist/fonts/ms_sans_serif.woff2";
-import ms_sans_serif_bold from "react95/dist/fonts/ms_sans_serif_bold.woff2";
-import marumonica from "./font/x12y16pxmarumonica.ttf";
+import ms_sans_serif from 'react95/dist/fonts/ms_sans_serif.woff2';
+import ms_sans_serif_bold from 'react95/dist/fonts/ms_sans_serif_bold.woff2';
+import marumonica from './font/x12y16pxmarumonica.ttf';
+import Footer from './components/Footer';
 
 const GlobalStyles = createGlobalStyle`
   ${styleReset}
@@ -60,6 +61,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
+      <Footer />
     </>
   );
 }
