@@ -22,6 +22,7 @@ function Footer() {
         display: 'flex',
         flexDirection: 'column',
         width: '100%',
+        padding: '10px 0px 15px',
       }}>
       <StyledFooterInner>
         <a href="/">
