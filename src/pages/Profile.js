@@ -100,22 +100,22 @@ function Top() {
               </Button>
             </WindowHeader>
             <WindowContent style={{ fontSize: '13px', fontWeight: 'bold' }}>
-            <ScrollView style={{height: '360px' }}>
-              Kodama Sakura ｜ 児玉 さくら
-              <br />
-              <br />
-              このサイトはReact95を使って作成してみました。
-              <br />
-              <br />
-              ボロボロですが、少しずつ改善していくのでスタイルが崩れてるところや、不具合があればTwitterなりで教えていただけると嬉しいです😅🚀
-              <br />
-              <br />
-              現職ではAngularを使ったWebアプリケーションの開発をしてますが、ReactやWebGLも触っていきたいと思ってます。UIデザインもっと勉強したいし、作ってみたいサービスもあるし、とりあえずやりたいことが多すぎて優先順位をつけます😇
-              <br />
-              <br />
-              このサイトは、React95を使ってみたくてお試しサイトですが、いつか「kedamammoth伝記サイト」を作りたいです🚀🚀🚀
-              <br />
-              <br />
+              <ScrollView style={{ height: '360px' }}>
+                Kodama Sakura ｜ 児玉 さくら
+                <br />
+                <br />
+                このサイトはReact95を使って作成してみました。
+                <br />
+                <br />
+                ボロボロですが、少しずつ改善していくのでスタイルが崩れてるところや、不具合があればTwitterなりで教えていただけると嬉しいです😅🚀
+                <br />
+                <br />
+                現職ではAngularを使ったWebアプリケーションの開発をしてますが、ReactやWebGLも触っていきたいと思ってます。UIデザインもっと勉強したいし、作ってみたいサービスもあるし、ひとつひとつ取り組んでいきたいですね…
+                <br />
+                <br />
+                このサイトは、React95を使ってみたくてお試しサイトですが、いつか作成させてもらったサイトやサービスをアップしていけるような仕様にしたいです🚀🚀🚀
+                <br />
+                <br />
               </ScrollView>
             </WindowContent>
           </Window>
